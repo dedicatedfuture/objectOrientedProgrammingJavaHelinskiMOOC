@@ -8,11 +8,33 @@ public class GuessingGame {
         // use only this scanner, othervise the tests do not work
         this.reader = new Scanner(System.in);
     }
+    public int average(int firstNumber, int secondNumber){
+        return (firstNumber + secondNumber) / 2;
+    }
+
+    public boolean isGreaterThan(int value){
+        System.out.println("Is your number greater than " + value +"? (y/n)");
+        String input = reader.nextLine();
+        if(input.equals("y")){
+            return true;
+        }
+        return false;
+    }
 
     public void play(int lowerLimit, int upperLimit) {
         instructions(lowerLimit, upperLimit);
 
         // write the guessing logic here
+        while(lowerLimit < upperLimit){
+
+            if(isGreaterThan(average(lowerLimit,upperLimit))){
+                lowerLimit = average(lowerLimit, upperLimit) +1;
+            }else{
+                upperLimit = average(lowerLimit, upperLimit);
+            }
+
+        }
+        System.out.println("The number you're thinking of is " + lowerLimit);
 
     }
 

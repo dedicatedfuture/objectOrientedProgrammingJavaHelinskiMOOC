@@ -6,7 +6,9 @@ public class Main {
         
     // Your program should use only one Scanner object, i.e., it is allowed to call 
     // new Scanner only once. If you need scanner in multiple places, you can pass it as parameter
-            
+        BirdDatabase billsBirds = new BirdDatabase();
+
+        billsBirds.start();
     }
 
 }

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
@@ -8,5 +8,14 @@ public class Main {
         
         // Your program should use only one Scanner object, i.e., it is allowed to call 
         // new Scanner only once. If you need scanner in multiple places, you can pass it as parameter
+        Grades grades = new Grades();
+        ArrayList<Integer> gradeNumbers = new ArrayList<Integer>();
+
+        gradeNumbers = grades.listGrades(lukija);
+
+        grades.talleyGrades();
+        grades.printGrades();
+        
+
     }
 }

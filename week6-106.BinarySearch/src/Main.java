@@ -18,6 +18,12 @@ public class Main {
 
         boolean tulos = BinarySearch.search(taulukko, Integer.parseInt(etsittavaLuku));
 
+        if(tulos){
+            System.out.println("Value " + etsittavaLuku + " is in the array.");
+        }else{
+            System.out.println("Value " + etsittavaLuku + " is not in the array.");
+        }
+
         // Print here the result
     }
 }
